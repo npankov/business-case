@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BusinessCase": {
+    "business-case": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "BusinessCase:build:production"
+              "browserTarget": "business-case:build:production"
             },
             "development": {
-              "browserTarget": "BusinessCase:build:development"
+              "browserTarget": "business-case:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BusinessCase:build"
+            "browserTarget": "business-case:build"
           }
         },
         "test": {
@@ -103,5 +103,5 @@
       }
     }
   },
-  "defaultProject": "BusinessCase"
+  "defaultProject": "business-case"
 }

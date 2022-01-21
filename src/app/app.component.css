@@ -24,6 +24,7 @@
 
 .form-authentication {
   background: rgba(255, 148, 0, 0.4);
+  border-radius: 5px;
 }
 
 .register{

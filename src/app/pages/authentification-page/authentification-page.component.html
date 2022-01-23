@@ -1,1 +1,18 @@
-<p>authentification-page works!</p>
+<div class="container my-2 body d-flex align-items-center justify-content-center">
+  <div class="row">
+    <div class="col d-flex justify-content-center align-items-center py-3 form-authentication">
+      <form (ngSubmit)="validateForm()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" required [(ngModel)]="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" required [(ngModel)]="pass" name="pass" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-warning mx-2 login">Se connecter</button>
+        <button type="submit" class="btn btn-info mx-2 register" >Créer un compte</button>
+      </form>
+    </div>
+  </div>
+</div>

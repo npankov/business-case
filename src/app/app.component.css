@@ -1,11 +1,8 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
-.container {
-  width: 1060px;
-}
-
-.body {
-  height: 53vh;
+.bi-person {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 #navbar {
@@ -22,33 +19,8 @@
   color: #0a84ff;
 }
 
-.form-authentication {
-  background: rgba(255, 148, 0, 0.4);
-  border-radius: 5px;
-}
-
-.register{
-  background: #0a84ff;
-  color: #ffffff;
-}
-.register:hover {
-  border-color: #49a4fa;
-  background-color: #49a4fa;
-}
-
-.title-category {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-  margin-bottom: 10px;
-}
-
-.title-category-centre {
-  color: #FF9400;
-}
-
-.title-category-centre h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-  padding-bottom: 10px;
-  font-size: 2.4rem;
+#navbar ul {
+  padding: 0 20% 0 20%;
 }
 
 #footer {

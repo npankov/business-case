@@ -1,0 +1,13 @@
+.form-authentication {
+  background: rgba(255, 148, 0, 0.4);
+  border-radius: 5px;
+}
+
+.register{
+  background: #0a84ff;
+  color: #ffffff;
+}
+.register:hover {
+  border-color: #49a4fa;
+  background-color: #49a4fa;
+}

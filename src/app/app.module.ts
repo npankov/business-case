@@ -8,6 +8,7 @@ import { SalesPageComponent } from './pages/sales-page/sales-page.component';
 import { BasketsPageComponent } from './pages/baskets-page/baskets-page.component';
 import { ClientsPageComponent } from './pages/clients-page/clients-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,7 +21,6 @@ export class AuthentificationPageComponent implements OnInit {
     this.authService.checkAuth(this.email, this.pass).then((credentialsIsOk) => {
       if (credentialsIsOk) {
         this.router.navigate(['ventes']);
-        // this.authService.isAuthenticated = true;
       } else {
         this.credentialsIsBad = true;
       }

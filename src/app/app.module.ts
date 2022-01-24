@@ -9,7 +9,9 @@ import { BasketsPageComponent } from './pages/baskets-page/baskets-page.componen
 import { ClientsPageComponent } from './pages/clients-page/clients-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ChartComponent } from './components/chart/chart.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { HttpClientModule } from '@angular/common/http'
     AuthentificationPageComponent,
     SalesPageComponent,
     BasketsPageComponent,
-    ClientsPageComponent
+    ClientsPageComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

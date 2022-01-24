@@ -8,13 +8,8 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'business-case';
-  isAuth!: boolean;
 
-  constructor(private authService: AuthService ) {
-    console.log(this.authService.isAuthenticated)
-    this.isAuth = this.authService.isAuthenticated;
+  constructor(public authService: AuthService ) {
   }
-
-
 
 }

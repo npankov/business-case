@@ -23,7 +23,7 @@
   <div class="container">
     <div class="row">
       <div class="col px-0">
-        <ul *ngIf="isAuth; else elseBlock" class="nav my-2 d-flex justify-content-between">
+        <ul *ngIf="authService.isAuthenticated; else elseBlock" class="nav my-2 d-flex justify-content-between">
           <li class="nav-item">
             <a class="nav-link px-0" routerLink="/ventes">Ventes</a>
           </li>
@@ -67,7 +67,7 @@
           <li><address class="footer-category">1 rue Garibaldi, Nîmes</address></li>
         </ul>
       </div>
-      <div class="col d-flex align-items-center justify-content-end">
+      <div class="col d-flex align-items-center justify-content-">
         <a href="index.html">
           <img src="./assets/img/logo.png" alt="">
         </a>

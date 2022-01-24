@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class AuthentificationPageComponent implements OnInit {
   public email!: string;
   public pass!: string;
+  public credentialsIsBad = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -17,10 +18,14 @@ export class AuthentificationPageComponent implements OnInit {
   }
 
   validateForm() {
-    console.log(this.email, this.pass);
-    this.authService.isAuthenticated = true;
-    this.router.navigate(['ventes']);
-    console.log(this.authService.isAuthenticated)
+    this.authService.checkAuth(this.email, this.pass).then((credentialsIsOk) => {
+      if (credentialsIsOk) {
+        this.router.navigate(['ventes']);
+        // this.authService.isAuthenticated = true;
+      } else {
+        this.credentialsIsBad = true;
+      }
+    })
   }
 
 }

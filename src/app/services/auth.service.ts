@@ -11,8 +11,8 @@ export class AuthService {
   public isAuthenticated = false;
   public token!: string;
 
-  constructor(private httpClient: HttpClient, router: Router) {
-    this.getToken(router);
+  constructor(private httpClient: HttpClient, private router: Router) {
+    this.getToken();
   }
 
   checkAuth(email: string, pass: string): Promise<boolean> {
@@ -36,13 +36,20 @@ export class AuthService {
     )
   }
 
-  getToken(router: Router) {
+  getToken() {
     const storageName = 'userData';
     let oldToken = localStorage.getItem(storageName)
     if (oldToken) {
       this.isAuthenticated = true;
       this.token = oldToken;
-      router.navigate(['/ventes'])
+      this.router.navigate(['/ventes']);
     }
+  }
+
+  disconnect() {
+    //создаем метод здесь и вызываем этот метод в компоненте с кнопкой
+    localStorage.clear();
+    this.isAuthenticated = false;
+    this.router.navigate(['/login']);
   }
 }

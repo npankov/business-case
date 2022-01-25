@@ -12,6 +12,7 @@
           <div class="btn py-0">
             <!--            <img src="./assets/img/icons/userAcc.png" alt="">-->
             <i class="bi bi-person"></i>
+            <i *ngIf="authService.isAuthenticated" class="bi bi-box-arrow-left" (click)="authService.disconnect()"></i>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export class AuthentificationPageComponent implements OnInit {
   public pass!: string;
   public credentialsIsBad = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }

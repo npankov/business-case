@@ -47,7 +47,6 @@ export class AuthService {
   }
 
   disconnect() {
-    //создаем метод здесь и вызываем этот метод в компоненте с кнопкой
     localStorage.clear();
     this.isAuthenticated = false;
     this.router.navigate(['/login']);
